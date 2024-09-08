@@ -1,0 +1,406 @@
+@import url(./fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+header {
+    background-image: url(../img/Bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+
+    @media (max-width:900px) {
+        background-image: url(../img/Header-Bg.jpg);
+        height: 750px;
+    }
+
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:900px) {
+            flex-direction: column;
+        }
+
+        ul {
+            @media (max-width:900px) {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        ul li a {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}
+
+main {
+    margin-top: 70px;
+
+    .main__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        @media (max-width:600px) {
+            flex-direction: column;
+        }
+
+        .main__info {
+            border: 1px solid rgba(0, 0, 0, 0.151);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 300px;
+            height: 350px;
+            transition: .2s linear;
+
+            button {
+                width: 100px;
+                height: 50px;
+                font-weight: 700;
+                font-size: 15px;
+                border: none;
+                border-radius: 7px;
+                background: rgb(31, 175, 201);
+                color: white;
+                transition: .2s linear;
+                margin-top: 30px;
+            }
+
+            button:hover {
+                border: 1px solid rgb(31, 175, 201);
+                background: white;
+                color: rgb(46, 218, 248);
+                transition: .2s linear;
+            }
+
+            img {
+                width: 300px;
+            }
+        }
+
+        .main__info:nth-last-of-type(1) {
+            img {
+                width: 200px;
+            }
+
+            button {
+                margin-top: 50px;
+            }
+        }
+
+        .main__info:hover {
+            background: green;
+        }
+
+        .main__info:nth-last-of-type(1):hover {
+            background: aqua;
+        }
+    }
+
+    .android {
+        background: green;
+        height: 150px;
+        margin-top: 70px;
+
+        .android__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 50px;
+
+            h1 {
+                font-weight: 700;
+                font-size: 50px;
+                color: white;
+            }
+        }
+
+        .android__content {
+            display: grid;
+            grid-template-columns: repeat(3, 6fr);
+            place-items: center;
+            gap: 40px;
+            margin-top: 150px;
+
+            @media (max-width:1030px) {
+                grid-template-columns: repeat(2, 6fr);
+            }
+
+            @media (max-width:690px) {
+                grid-template-columns: repeat(1, 6fr);
+            }
+
+            .android__info {
+                border: 1px solid rgba(0, 0, 0, 0.151);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 300px;
+                height: 350px;
+                transition: .2s linear;
+
+                img {
+                    width: 200px;
+                }
+
+                p {
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: green;
+                    margin-top: 50px;
+                }
+            }
+
+            .android__info:hover {
+                background-image: url(../img/Android\ -\ Bg.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                transition: .2s linear;
+            }
+        }
+
+        .android__text {
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 70px;
+            text-align: center;
+
+            @media (max-width:500px) {
+                font-size: 20px;
+                text-align: left;
+            }
+        }
+    }
+
+    .ios {
+        background: blue;
+        height: 150px;
+        margin-top: 1400px;
+
+        @media (max-width:1036px) {
+            margin-top: 1600px;
+        }
+
+        @media (max-width:1030px) {
+            margin-top: 1900px;
+        }
+
+        @media (max-width:860px) {
+            margin-top: 2100px;
+        }
+
+        @media (max-width:690px) {
+            margin-top: 3300px;
+        }
+
+        @media (max-width:612px) {
+            margin-top: 3600px;
+        }
+
+        @media (max-width:500px) {
+            margin-top: 3000px;
+        }
+
+        @media (max-width:450px) {
+            margin-top: 3150px;
+        }
+
+        @media (max-width:371px) {
+            margin-top: 3300px;
+        }
+
+
+        .ios__title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 50px;
+
+            h1 {
+                font-weight: 700;
+                font-size: 50px;
+                color: white;
+            }
+        }
+
+        .ios__content {
+            display: grid;
+            grid-template-columns: repeat(3, 6fr);
+            place-items: center;
+            gap: 40px;
+            margin-top: 150px;
+
+            @media (max-width:1030px) {
+                grid-template-columns: repeat(2, 6fr);
+            }
+
+            @media (max-width:690px) {
+                grid-template-columns: repeat(1, 6fr);
+            }
+
+            .ios__info {
+                border: 1px solid rgba(0, 0, 0, 0.151);
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 300px;
+                height: 350px;
+                transition: .2s linear;
+
+                img {
+                    width: 200px;
+                }
+
+                p {
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: blue;
+                    margin-top: 50px;
+                }
+            }
+
+            .ios__info:hover {
+                background-image: url(../img/iOS\ -\ Bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                transition: .2s linear;
+            }
+        }
+
+        .ios__text {
+            font-weight: 700;
+            font-size: 30px;
+            margin-top: 70px;
+            text-align: center;
+
+            @media (max-width:500px) {
+                font-size: 20px;
+                text-align: left;
+            }
+        }
+    }
+}
+
+footer {
+    background-image: url(../img/Bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    margin-top: 1400px;
+
+    @media (max-width:1182px) {
+        margin-top: 1500px;
+    }
+
+    @media (max-width:1030px) {
+        margin-top: 2000px;
+    }
+
+    @media (max-width:837px) {
+        margin-top: 2100px;
+    }
+
+    @media (max-width:770px) {
+        margin-top: 2300px;
+    }
+
+    @media (max-width:690px) {
+        margin-top: 3500px;
+    }
+
+    @media (max-width:612px) {
+        margin-top: 3800px;
+    }
+
+    @media (max-width:500px) {
+        margin-top: 3100px;
+    }
+
+    @media (max-width:450px) {
+        margin-top: 3200px;
+    }
+
+    @media (max-width:395px) {
+        margin-top: 3300px;
+    }
+
+    @media (max-width:360px) {
+        margin-top: 3450px;
+    }
+
+    @media (max-width:900px) {
+        background-image: url(../img/Footer-Bg.jpg);
+        height: 750px;
+    }
+
+    .footer__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:900px) {
+            flex-direction: column;
+        }
+
+        ul {
+            @media (max-width:900px) {
+                flex-direction: column;
+                text-align: center;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+        }
+
+        ul li a {
+            font-size: 30px;
+            font-weight: 700;
+            color: white;
+        }
+    }
+}

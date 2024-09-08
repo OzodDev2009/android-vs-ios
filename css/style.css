@@ -1,0 +1,398 @@
+@import url(./fonts.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+header {
+  background-image: url(../img/Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+@media (max-width: 900px) {
+  header {
+    background-image: url(../img/Header-Bg.jpg);
+    height: 750px;
+  }
+}
+header .header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  header .header__nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  header .header__nav ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+header .header__nav ul li a {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}
+
+main {
+  margin-top: 70px;
+}
+main .main__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  main .main__content {
+    flex-direction: column;
+  }
+}
+main .main__content .main__info {
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  transition: 0.2s linear;
+}
+main .main__content .main__info button {
+  width: 100px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  border-radius: 7px;
+  background: rgb(31, 175, 201);
+  color: white;
+  transition: 0.2s linear;
+  margin-top: 30px;
+}
+main .main__content .main__info button:hover {
+  border: 1px solid rgb(31, 175, 201);
+  background: white;
+  color: rgb(46, 218, 248);
+  transition: 0.2s linear;
+}
+main .main__content .main__info img {
+  width: 300px;
+}
+main .main__content .main__info:nth-last-of-type(1) img {
+  width: 200px;
+}
+main .main__content .main__info:nth-last-of-type(1) button {
+  margin-top: 50px;
+}
+main .main__content .main__info:hover {
+  background: green;
+}
+main .main__content .main__info:nth-last-of-type(1):hover {
+  background: aqua;
+}
+main .android {
+  background: green;
+  height: 150px;
+  margin-top: 70px;
+}
+main .android .android__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50px;
+}
+main .android .android__title h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+}
+main .android .android__content {
+  display: grid;
+  grid-template-columns: repeat(3, 6fr);
+  place-items: center;
+  gap: 40px;
+  margin-top: 150px;
+}
+@media (max-width: 1030px) {
+  main .android .android__content {
+    grid-template-columns: repeat(2, 6fr);
+  }
+}
+@media (max-width: 690px) {
+  main .android .android__content {
+    grid-template-columns: repeat(1, 6fr);
+  }
+}
+main .android .android__content .android__info {
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  transition: 0.2s linear;
+}
+main .android .android__content .android__info img {
+  width: 200px;
+}
+main .android .android__content .android__info p {
+  font-weight: 700;
+  font-size: 20px;
+  color: green;
+  margin-top: 50px;
+}
+main .android .android__content .android__info:hover {
+  background-image: url(../img/Android\ -\ Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s linear;
+}
+main .android .android__text {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 70px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  main .android .android__text {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+main .ios {
+  background: blue;
+  height: 150px;
+  margin-top: 1400px;
+}
+@media (max-width: 1036px) {
+  main .ios {
+    margin-top: 1600px;
+  }
+}
+@media (max-width: 1030px) {
+  main .ios {
+    margin-top: 1900px;
+  }
+}
+@media (max-width: 860px) {
+  main .ios {
+    margin-top: 2100px;
+  }
+}
+@media (max-width: 690px) {
+  main .ios {
+    margin-top: 3300px;
+  }
+}
+@media (max-width: 612px) {
+  main .ios {
+    margin-top: 3600px;
+  }
+}
+@media (max-width: 500px) {
+  main .ios {
+    margin-top: 3000px;
+  }
+}
+@media (max-width: 450px) {
+  main .ios {
+    margin-top: 3150px;
+  }
+}
+@media (max-width: 371px) {
+  main .ios {
+    margin-top: 3300px;
+  }
+}
+main .ios .ios__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50px;
+}
+main .ios .ios__title h1 {
+  font-weight: 700;
+  font-size: 50px;
+  color: white;
+}
+main .ios .ios__content {
+  display: grid;
+  grid-template-columns: repeat(3, 6fr);
+  place-items: center;
+  gap: 40px;
+  margin-top: 150px;
+}
+@media (max-width: 1030px) {
+  main .ios .ios__content {
+    grid-template-columns: repeat(2, 6fr);
+  }
+}
+@media (max-width: 690px) {
+  main .ios .ios__content {
+    grid-template-columns: repeat(1, 6fr);
+  }
+}
+main .ios .ios__content .ios__info {
+  border: 1px solid rgba(0, 0, 0, 0.151);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  transition: 0.2s linear;
+}
+main .ios .ios__content .ios__info img {
+  width: 200px;
+}
+main .ios .ios__content .ios__info p {
+  font-weight: 700;
+  font-size: 20px;
+  color: blue;
+  margin-top: 50px;
+}
+main .ios .ios__content .ios__info:hover {
+  background-image: url(../img/iOS\ -\ Bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s linear;
+}
+main .ios .ios__text {
+  font-weight: 700;
+  font-size: 30px;
+  margin-top: 70px;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  main .ios .ios__text {
+    font-size: 20px;
+    text-align: left;
+  }
+}
+
+footer {
+  background-image: url(../img/Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  margin-top: 1400px;
+}
+@media (max-width: 1182px) {
+  footer {
+    margin-top: 1500px;
+  }
+}
+@media (max-width: 1030px) {
+  footer {
+    margin-top: 2000px;
+  }
+}
+@media (max-width: 837px) {
+  footer {
+    margin-top: 2100px;
+  }
+}
+@media (max-width: 770px) {
+  footer {
+    margin-top: 2300px;
+  }
+}
+@media (max-width: 690px) {
+  footer {
+    margin-top: 3500px;
+  }
+}
+@media (max-width: 612px) {
+  footer {
+    margin-top: 3800px;
+  }
+}
+@media (max-width: 500px) {
+  footer {
+    margin-top: 3100px;
+  }
+}
+@media (max-width: 450px) {
+  footer {
+    margin-top: 3200px;
+  }
+}
+@media (max-width: 395px) {
+  footer {
+    margin-top: 3300px;
+  }
+}
+@media (max-width: 360px) {
+  footer {
+    margin-top: 3450px;
+  }
+}
+@media (max-width: 900px) {
+  footer {
+    background-image: url(../img/Footer-Bg.jpg);
+    height: 750px;
+  }
+}
+footer .footer__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  footer .footer__nav {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  footer .footer__nav ul {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+footer .footer__nav ul li a {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+}/*# sourceMappingURL=style.css.map */
